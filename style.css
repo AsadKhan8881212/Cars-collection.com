@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Revolution&display=swap');
+
+
+body {
+    margin: 0;
+}
+header {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+header video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.menu-icon {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    padding: 10px;
+    cursor: pointer;
+    background: rgb(0, 0, 0, 0.3);
+    display: flex;
+    z-index: 300;
+    color: #fff;
+    transition: all 300ms ease;
+}
+
+.menu-icon:hover {
+    background: rgb(0, 0, 0, 1);
+}
+
+.menu-icon svg {
+    height: 30px;
+}
+.menu-items-container .close-icon {
+    position: fixed;
+    right: 40px;
+    top: 40px;
+    padding: 10px;
+    color: #fff;
+    cursor: pointer;
+}
+.menu-items-container .close-icon svg {
+    height: 30px;
+    transition: all 300ms ease;
+}
+.menu-items-container .close-icon:hover svg {
+    transform: scale(1.6);
+}
+.menu-items-container {
+    position: fixed;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    background: #111;
+    z-index: 400;
+    transform: translateX(100%);
+    transition: all 1000ms cubic-bezier(0.17, 0.67, 0, 1);
+
+}
+.menu-items-container.active {
+    transform: translateX(0);
+}
+
+.menu-items-container a {
+    text-decoration: none;
+    color: #fff;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    position: relative;
+    width: fit-content;
+    opacity: 0;
+    transform: translateY(10px);
+}
+.menu-items-container.active a {
+    animation: fadeUp 0.9s ease forwards;
+    animation-delay: 400ms;
+}
+
+.menu-items-container .avtive .menu-items a:nth-child(1){
+    animation-delay: 0.2s;
+}
+.menu-items-container .avtive .menu-items a:nth-child(2){
+    animation-delay: 0.4s;
+}
+.menu-items-container .avtive .menu-items a:nth-child(3){
+    animation-delay: 0.6s;
+}
+.menu-items-container .avtive .menu-items a:nth-child(4){
+    animation-delay: 0.8s;
+}
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.menu-items-container a::after {
+    content: "";
+    width: 0%;
+    height: 100%;
+    position: absolute;
+    background: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+    transition: all 300ms ease;
+}
+.menu-items-container a:hover::after {
+    width: 120%;
+}
+.menu-items-container a:hover {
+    color: #000;
+}
+.menu-items-container .menu-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    text-align: center;
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+header .text-content {
+    position: absolute;
+    bottom: 180px;
+    width: 100%;
+    max-width: 1000px;
+    left: 50%;
+    transform: translateX(-50%); 
+    text-align: center;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif ;   
+}
+header h1 {
+    font-size: 60px;
+    font-family:"Pacifico", sans-serif;
+    margin: 0;
+    margin-inline:30px;
+    color: #fff;
+    
+    
+}
+.btn {
+    border: 2px solid #fff;
+    color: #fff;
+    padding: 12px 24px;
+    display: inline-block;
+    text-decoration: none;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-top: 20px;
+    margin-inline: 30px;
+    transition: all 700ms ease;
+}
+.btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+@media (max-width: 900px) {
+    header .text-content {
+        text-align: left;
+        bottom: 80px;
+    }
+    header h1 {
+      font-size: 50px;
+    }
+}
+
+h2 {
+    font-family:"Protest Revolution", sans-serif;
+    font-size: 250%;
+    color: blue;
+}
+
+body {
+  background:linear-gradient(to right, black, rgb(36, 35, 35), rgb(58, 57, 57));
+}
+p {
+    text-align: justify;
+    color: #fff;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    letter-spacing: 2px;
+}
+.swiper {
+    width: 100%;
+    height: 100vh;
+}
+.swiper .swiper-slide {
+    max-width: 700px;
+    display: flex;
+    align-items: center;
+}
+.swiper img {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: flex;
+}
+h3 {
+    color:gray;
+    font-size: medium;
+    font-family: "Protest Revolution", sans-serif;
+    text-align: center;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Protest+Revolution&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Pacifico&family=Protest+Revolution&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Protest Revoltion", sans-serif;
+    background:linear-gradient(to left, black, rgb(36, 35, 35), rgb(58, 57, 57));;
+}
+header {
+    height: 500px;
+}
+header h1 {
+    font-size: 60px;
+    text-align:center;
+    font-weight: lighter;
+    letter-spacing: 4px;
+    margin: 0;
+    font-family: "Lobster", sans-serif;
+    padding-block: 30px;
+    color: azure;
+}
+header img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#horizontal .content {
+    height: 100vh;
+    width: 160vh;
+    flex-shrink: 0;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform:none;
+    font-family: "Lobster", sans-serif;
+
+}
+#horizontal {
+   display: flex;
+   overflow-x: hidden;
+}
+#horizontal .content:nth-child(1) {
+    background:linear-gradient(to bottom, red,gray, white);
+}
+#horizontal .content:nth-child(2) {
+    background:#000;
+}
+#horizontal .content:nth-child(3) {
+    background:#000;
+}
+#horizontal .content:nth-child(4) {
+    background:linear-gradient(to  bottom, red,gray, white);
+}
+footer {
+    max-width: 700px;
+    margin-inline: auto;
+    line-height: 1.9;
+    font-family: "Lobster", sans-serif;
+}
+h2 {
+    color: blue;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
